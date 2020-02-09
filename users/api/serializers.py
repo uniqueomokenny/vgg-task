@@ -13,7 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         exclude = ("is_superuser", "is_staff", "is_active",
-                   "groups", "user_permissions")
+                   "groups", "user_permissions", "last_login")
         extra_kwargs = {"password": {"write_only": True}}
 
     def validate(self, data):
