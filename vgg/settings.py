@@ -28,7 +28,9 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework_swagger',
     # apps
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'projects.apps.ProjectsConfig',
+    'actions.apps.ActionsConfig',
 ]
 
 MIDDLEWARE = [
