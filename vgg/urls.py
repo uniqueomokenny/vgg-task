@@ -13,6 +13,7 @@ urlpatterns = [
     path('', schema_view),
     path('users/', include('users.api.urls')),
     path('projects/', include('projects.api.urls')),
+    path('actions/', include('actions.api.urls')),
     path('admin/', admin.site.urls),
 ]
 
