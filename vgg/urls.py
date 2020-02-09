@@ -12,6 +12,7 @@ schema_view = get_swagger_view(title='Vgg API')
 urlpatterns = [
     path('', schema_view),
     path('users/', include('users.api.urls')),
+    path('projects/', include('projects.api.urls')),
     path('admin/', admin.site.urls),
 ]
 
