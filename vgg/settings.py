@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -9,7 +10,7 @@ SECRET_KEY = '3bhih7kujnc-!kbjil4ynev$3p**m&@i22(j20$&*xn9uzy*2k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "vgg-api.herokuapp.com"]
 
 
 # Application definition
@@ -148,3 +149,6 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.MultiPartParser',
     ),
 }
+
+
+django_heroku.settings(locals())
