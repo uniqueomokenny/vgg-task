@@ -127,6 +127,8 @@ MEDIA_URL = '/media/'
 
 # REST FRAMEWORK SETTINGS
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'projects.custompagination.LimitOffsetPaginationWithUpperBound',
+    'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
